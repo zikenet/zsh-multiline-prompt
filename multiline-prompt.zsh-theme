@@ -2,6 +2,7 @@
 
 autoload -Uz vcs_info
 autoload -U colors && colors
+colors
 
 zstyle ':vcs_info:*' enable git 
 
@@ -21,5 +22,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%})%{$reset_color%}"
 
-PROMPT="%B%{$fg[cyan]%}%c%{$reset_color%} \$vcs_info_msg_0_\n"
+NEWLINE=$'\n'
+
+PROMPT="%B%{$fg[cyan]%}%c%{$reset_color%} \$vcs_info_msg_0_${NEWLINE}"
 PROMPT+="%B%{$fg[white]%}→ %{$reset_color%}"
