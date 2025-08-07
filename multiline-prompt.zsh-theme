@@ -25,4 +25,4 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 NEWLINE=$'\n'
 
 PROMPT="%B%{$fg[cyan]%}%c%{$reset_color%} \$vcs_info_msg_0_${NEWLINE}"
-PROMPT+="%B%{$fg[white]%}→ %{$reset_color%}"
+PROMPT+="%B%{$fg[white]%}⇒ %{$reset_color%}"
